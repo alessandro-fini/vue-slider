@@ -15,14 +15,14 @@
     <!-- / -->
     <!-- images box -->
     <div class="box">
-      <img src="https://cdn.pixabay.com/photo/2016/10/28/13/09/usa-1777986_1280.jpg" alt="">
+      <img :src="imgSrc[imgIndex]" :alt="imgAlt[imgIndex]">
       <!-- dots -->
       <i class="fas fa-circle"></i>
       <!-- / -->
     </div>
     <!-- / -->
     <!-- next image arrow -->
-    <i class="fas fa-chevron-right arrow"></i>
+    <i class="fas fa-chevron-right arrow" @click="nextImg"></i>
     <!-- / -->
   </div>
   
