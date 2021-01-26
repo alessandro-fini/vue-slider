@@ -15,7 +15,8 @@ let app = new Vue({
       'george-washington-bridge',
       'george-washington-bridge',
       'manhattan-skyline'
-    ]
+    ],
+    imgInterval: '',
   },
   methods: {
     nextImg: function(){
@@ -27,7 +28,11 @@ let app = new Vue({
       console.log(this.imgIndex);
     },
     selectImg: function(index){
+      clearInterval(this.imgInterval);
       return this.imgIndex = index;
     }
-  }
+  },
+  created: function(){
+    this.imgInterval = setInterval(this.nextImg, 2000);
+  },
 });
