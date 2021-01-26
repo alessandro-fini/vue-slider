@@ -18,7 +18,7 @@
       <img :src="imgSrc[imgIndex]" :alt="imgAlt[imgIndex]">
       <!-- dots -->
       <div class="ico-box">
-        <i class="fas fa-circle" v-for="item in imgSrc"></i>
+        <i class="fas fa-circle" v-for="(item, index) in imgSrc" :class="(index == imgIndex) ? 'active' : 'none'"></i>
       </div>
       <!-- / -->
     </div>
