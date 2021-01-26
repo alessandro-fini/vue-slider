@@ -30,9 +30,22 @@ let app = new Vue({
     selectImg: function(index){
       clearInterval(this.imgInterval);
       return this.imgIndex = index;
-    }
+    },
+    /* rotazione immagini con arrow right/left */
+    rightImg: function(e){
+      if (this.imgIndex >= this.imgSrc.length - 1) {
+        this.imgIndex = 0;
+      } else if (e.keyCode == 39) {
+        this.imgIndex++;
+      }  
+      console.log(this.imgIndex);
+    },
+    /* / */
   },
   created: function(){
     this.imgInterval = setInterval(this.nextImg, 2000);
   },
+  mounted: function(){
+    document.addEventListener('keyup', this.rightImg);
+  }
 });
