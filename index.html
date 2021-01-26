@@ -11,13 +11,15 @@
 <body>
   <div id="container">
     <!-- previous image arrow -->
-    <i class="fas fa-chevron-left arrow"></i>
+    <i class="fas fa-chevron-left arrow" @click="prevImg"></i>
     <!-- / -->
     <!-- images box -->
     <div class="box">
       <img :src="imgSrc[imgIndex]" :alt="imgAlt[imgIndex]">
       <!-- dots -->
-      <i class="fas fa-circle"></i>
+      <div class="ico-box">
+        <i class="fas fa-circle" v-for="item in imgSrc"></i>
+      </div>
       <!-- / -->
     </div>
     <!-- / -->

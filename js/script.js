@@ -21,6 +21,10 @@ let app = new Vue({
     nextImg: function(){
       (this.imgIndex >= this.imgSrc.length - 1) ? this.imgIndex = 0 : this.imgIndex++;
       console.log(this.imgIndex);
+    },
+    prevImg: function(){
+      (this.imgIndex <= 0) ? this.imgIndex = this.imgSrc.length - 1 : this.imgIndex--;
+      console.log(this.imgIndex);
     }
   }
 });

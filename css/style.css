@@ -29,13 +29,17 @@
   position: relative;
 }
 
-.box i{
+.box .ico-box{
   position: absolute;
   top: 80%;
   padding: 10px;
-  color: white;
   background-color: #00000081;
   border-radius: 20px;
+}
+
+.ico-box i{
+  margin: 0 10px;
+  color: white;
   cursor: pointer;
 }
 
