@@ -25,6 +25,9 @@ let app = new Vue({
     prevImg: function(){
       (this.imgIndex <= 0) ? this.imgIndex = this.imgSrc.length - 1 : this.imgIndex--;
       console.log(this.imgIndex);
+    },
+    selectImg: function(index){
+      return this.imgIndex = index;
     }
   }
 });
